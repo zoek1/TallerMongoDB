@@ -19,7 +19,7 @@
 
 
 \title{MongoDB}
-\subtitle{Taller basico}
+\subtitle{Taller básico}
 \author{Miguel Angel Gordian}
 \institute{Aztli}
 \date{\today}
@@ -123,7 +123,7 @@
   \vfill
 }
 
-\begin{frame}{Caracteristicas}
+\begin{frame}{Características}
   \begin{itemize}
   \item[$\bullet$]<1-> Base de datos
     
@@ -140,8 +140,8 @@
 
 \begin{frame}[fragile]{Documentos}
   \begin{block}{Documentos}
-    Esencialmente un documento es un array asociativo, los cuales son  estructuras de 
-    datos que mantienen la informacion en la base de datos.
+    Esencialmente un documento es un array asociativo, los cuales son estructuras de 
+    datos que mantienen la información en la base de datos.
   \end{block}
   \vfill
   \begin{minted}[bgcolor=bg]{js+cheetah}
@@ -164,7 +164,7 @@
 
     \item[$\bullet$] Licencia comerciales
 
-    \item[$\bullet$] Las contribuciones  son bienvenidas
+    \item[$\bullet$] Las contribuciones son bienvenidas
   \end{itemize}
 \end{frame}
 
@@ -174,9 +174,9 @@
   \begin{itemize}
   \item[$\bullet$] Escrito en C++
 
-  \item[$\bullet$] Uso extensico de mapeo de memoria de archivos
+  \item[$\bullet$] Uso extensivo de mapeo de memoria de archivos
 
-  \item[$\bullet$] Sopoerte completo para indices primarios y secundarios
+  \item[$\bullet$] Soporte completo para índices primarios y secundarios
 
   \item[$\bullet$] Uso de bson para el manejo de los datos
 
@@ -201,7 +201,7 @@
   \item[$\bullet$] Soporte para operaciones geo-espaciales
 
   \item[$\bullet$] Soporte para gran variedad de lenguajes
-    programacion.
+    programación.
 
   \item[$\bullet$] Schema flexible
   \end{itemize}
@@ -216,7 +216,7 @@
 
 \begin{frame}[fragile]{mongod}
   \begin{block}{mongod}
-    Es el demonio para que maneja las peticiones de datas, el formato de los
+    Es el demonio que maneja las peticiones de datas, el formato de los
     datos y el rendimiento de las operaciones en background.
   \end{block}
 
@@ -279,7 +279,7 @@ db.<coleccion>.insert({clave: valor})
 \begin{frame}[fragile]{Find}
 
   \begin{itemize}
-  \item Busqueda de elementos.
+  \item Búsqueda de elementos.
 
     \begin{minted}[bgcolor=bg]{js+cheetah}
 db.<coleccion>.findOne({clave: valor})
@@ -318,7 +318,7 @@ db.<coleccion>.update({clave: valor},
 \begin{frame}[fragile]{Remove}
 
   \begin{itemize}
-    \item Eliminar documentos que concuerden con el documento pasado como parametro.
+    \item Eliminar documentos que concuerden con el documento pasado como parámetro.
 
     \begin{minted}[bgcolor=bg]{js+cheetah}
 db.<coleccion>.remove({clave: valor})
@@ -329,7 +329,7 @@ db.<coleccion>.remove({clave: valor})
 \begin{frame}[fragile]{Contar elemetos}
 
   \begin{itemize}
-    \item Cuenta el numero de elementos devueltos a travez de una consulta.
+    \item Cuenta el numero de elementos devueltos a través de una consulta.
 
     \begin{minted}[bgcolor=bg]{js+cheetah}
 db.<coleccion>.find().count()
@@ -340,13 +340,13 @@ db.<coleccion>.find().count()
 \begin{frame}[fragile]{Ordenacion}
 
   \begin{itemize}
-    \item Ordenacion de la consulta en orden ascendente a travez del campo cualquiera.
+    \item Ordenamiento de la consulta ascendentemente a través del campo cualquiera.
 
     \begin{minted}[bgcolor=bg]{js+cheetah}
 db.<coleccion>.find().sort({cualquiera: 1})
     \end{minted}
 
-    \item Ordenacion de la consulta en orden descendente a travez del campo cualquiera.
+    \item Ordenamiento de la consulta descendentemente a través del campo cualquiera.
 
     \begin{minted}[bgcolor=bg]{js+cheetah}
 db.<coleccion>.find().sort({cualquiera: -1})
@@ -375,17 +375,17 @@ db.<coleccion>.find().limit(N)
 \section{Indexes}
 
 \begin{frame}[fragile]{Crear Indice}
-  Crear un indice es una operacion bloqueante que puede llegar a tomar
-  mucho tiempo completarla, para ello se puede agregar la opcion 
+  Crear un índice es una operación bloqueante que puede llegar a tomar
+  mucho tiempo completarla, para ello se puede agregar la opción 
   {background: true}, en las opciones.
 
   \begin{itemize}
-  \item Crear un indice ascendente
+  \item Crear un índice ascendente
     \begin{minted}[bgcolor=bg]{js+cheetah}
 db.<coleccion>.ensureIndex({key: 1})
     \end{minted}
 
-  \item Crear un indice ascendente
+  \item Crear un índice ascendente
     \begin{minted}[bgcolor=bg]{js+cheetah}
 db.<coleccion>.ensureIndex({key: -1})
     \end{minted}
@@ -469,7 +469,7 @@ db.articles.aggregate(
 
 \section{Permisos}
 \begin{frame}[fragile]{Agregar usuario}
-Usa db.addUser() para agregar docuemtnos a la coleccion system.users collection en la base de datos, la cual crea y mantiene las credecnciales en MongoDB.
+Usa db.addUser() para agregar documentos a la colección system.users collection en la base de datos, la cual crea y mantiene las credenciales en MongoDB.
 
 \begin{minted}[bgcolor=bg]{js+cheetah}
 db.addUser( { user: "<user>", 
@@ -525,7 +525,7 @@ mongod --setParameter enableLocalhostAuthBypass=0
 
 \begin{frame}
   \frametitle{Recursos}
-  \framesubtitle{¿Donde continuar?}
+  \framesubtitle{¿Dónde continuar?}
   \begin{thebibliography}{10}
 
   \beamertemplatearticlebibitems
