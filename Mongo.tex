@@ -7,7 +7,7 @@
 \usepackage{multicol}
 \usepackage{minted}
 \usepackage[utf8x]{inputenc}
-\usepackage{pgf,pgfarrows,pgfnodes,pgfautomata,pgfheaps,pgfshade}
+\usepackage{pgf}
 \usepackage{verbatim}
 
 \pdfinfo
@@ -385,7 +385,7 @@ db.<coleccion>.find().limit(N)
 db.<coleccion>.ensureIndex({key: 1})
     \end{minted}
 
-  \item Crear un índice ascendente
+  \item Crear un índice descendente
     \begin{minted}[bgcolor=bg]{js+cheetah}
 db.<coleccion>.ensureIndex({key: -1})
     \end{minted}
@@ -529,14 +529,26 @@ mongod --setParameter enableLocalhostAuthBypass=0
   \begin{thebibliography}{10}
 
   \beamertemplatearticlebibitems
-
+  \setbeamertemplate{bibliography item}[online]
   \bibitem{Mongo-homepage}
     Mongo
-    \newblock {\tt http://www.mongodb.org/}
+    \newblock {\tt http://docs.mongodb.org/manual/}
 
-  % \bibitem{Presentacion-slides}
-  %   Mongo - taller
-  %   \newblock {\tt http://www.kde.org/kdeslides/}
+  %% \setbeamertemplate{bibliography item}{\includegraphics[width=1.5em]{Img/picolo}}
+  \setbeamertemplate{bibliography item}[book]
+  \bibitem{El-pequenio-libro-de-mongo}
+    El pequeño libro de mongo - Karl Seguin (Español)
+    \newblock{\tt http://goo.gl/Iz9yJ}
+    
+    \setbeamertemplate{bibliography item}[book]
+  \bibitem{The-definitive-guide}
+    MongoDB: The Definitive Guide, 2nd Edition (Ingles)
+    \newblock{\tt http://goo.gl/peZ7B}
+      
+    \setbeamertemplate{bibliography item}[article]
+  \bibitem{Presentacion-slides}
+    Mongo - taller
+    \newblock {\tt https://speakerdeck.com/zoek1/mongodb}
 
   \end{thebibliography}
 \end{frame}
@@ -545,11 +557,13 @@ mongod --setParameter enableLocalhostAuthBypass=0
   \vspace{2cm}
   {\huge ¿Preguntas?}
 
-  \vspace{3cm}
+  \vspace{2.5cm}
   \begin{flushright}
     Miguel Angel Gordian
 
     \structure{\footnotesize{os.aioria@gmail.com}}
+
+    \structure{\footnotesize{@capitanzoek}}
   \end{flushright}
 }
 
